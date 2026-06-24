@@ -1,0 +1,396 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════════════
+   DayDraft — landing design system
+   Dark "Liquid Glass" identity + Premium Light Theme
+   ════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  /* Surfaces — slate graphite */
+  --bg-deep: #12151c;
+  --bg: #1a1d24;
+  --bg-soft: #20242c;
+  --line: 255 255 255; /* rgb(var(--line) / a) */
+
+  /* Ambient glows */
+  --ambient-glow-1: rgba(10,132,255,0.08);
+  --ambient-glow-2: rgba(94,92,230,0.07);
+  --ambient-vignette: rgba(0,0,0,0.5);
+
+  /* Ink */
+  --ink: #ffffff;
+  --ink-dim: #b0bac9;
+  --ink-faint: #808a99;
+
+  /* Brand accents (Apple dark-mode) */
+  --blue: #0a84ff;
+  --indigo: #5e5ce6;
+  --violet: #8e7bff;
+  --emerald: #30d158;
+  --amber: #ff9f0a;
+
+  /* Text & Accents */
+  --spark: #fffce0;
+  --cream: #e9e4d9;
+
+  /* Glass Effects */
+  --glass-bg: rgb(18 21 28 / 0.72);
+  --glass-gradient: linear-gradient(168deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 58%, rgb(255 255 255 / 0.055) 100%);
+  --glass-border: rgb(255 255 255 / 0.12);
+  --glass-border-top: rgb(255 255 255 / 0.25);
+  --glass-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18), inset 0 -1px 0 rgb(0 0 0 / 0.3), 0 0 0 1px rgb(0 0 0 / 0.6), 0 8px 30px -10px rgb(0 0 0 / 0.8);
+
+  --glass-strong-bg: rgb(16 19 26 / 0.68);
+  --glass-strong-gradient: 
+    radial-gradient(130% 120% at 0% 0%, rgb(10 132 255 / 0.13) 0%, transparent 55%),
+    radial-gradient(130% 120% at 100% 0%, rgb(94 92 230 / 0.10) 0%, transparent 60%),
+    linear-gradient(165deg, rgb(255 255 255 / 0.10) 0%, rgb(255 255 255 / 0.03) 100%);
+  --glass-strong-border: rgb(255 255 255 / 0.15);
+  --glass-strong-border-top: rgb(255 255 255 / 0.3);
+  --glass-strong-shadow: inset 0 1px 0 rgb(255 255 255 / 0.25), inset 0 -1px 0 rgb(0 0 0 / 0.4), inset 1px 0 0 rgb(255 255 255 / 0.08), 0 0 0 1px rgb(0 0 0 / 0.8), 0 12px 40px -12px rgb(0 0 0 / 0.9), 0 0 60px -15px rgb(255 255 255 / 0.03);
+
+  --glass-sheen: linear-gradient(150deg, rgb(255 255 255 / 0.1) 0%, transparent 34%);
+  --chip-bg: rgb(255 255 255 / 0.05);
+  --chip-border: rgb(255 255 255 / 0.1);
+
+  --selection-bg: rgb(10 132 255 / 0.3);
+  --selection-color: #fff;
+
+  color-scheme: dark;
+}
+
+.light {
+  /* Surfaces — premium iOS gray */
+  --bg-deep: #e5e5ea;
+  --bg: #f2f2f7;
+  --bg-soft: #ffffff;
+  --line: 0 0 0;
+
+  /* Ambient glows - soft colourful brand wash so the glass has something to blur */
+  --ambient-glow-1: rgba(10,132,255,0.11);
+  --ambient-glow-2: rgba(120,92,255,0.10);
+  --ambient-vignette: transparent; /* No gray vignette! */
+
+  /* Ink — solid black and very dark grays for maximum contrast */
+  --ink: #000000;
+  --ink-dim: #111827; /* Tailwinds gray-900, extremely readable */
+  --ink-faint: #374151; /* Tailwinds gray-700 */
+
+  /* Brand accents (Apple light-mode) */
+  --blue: #007aff;
+  --indigo: #5856d6;
+  --violet: #af52de;
+  --emerald: #34c759;
+  --amber: #ff9500;
+
+  /* Text & Accents */
+  --spark: #5856d6;
+  --cream: #000000;
+
+  /* Glass Effects - highly translucent frosted glass cards */
+  --glass-bg: rgb(255 255 255 / 0.55);
+  --glass-gradient: linear-gradient(168deg, rgb(255 255 255 / 0.9) 0%, rgb(255 255 255 / 0.45) 100%);
+  --glass-border: rgb(16 24 40 / 0.07);
+  --glass-border-top: rgb(255 255 255 / 0.9);
+  --glass-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    0 1px 2px rgb(16 24 40 / 0.04),
+    0 6px 18px -4px rgb(16 24 40 / 0.09),
+    0 0 0 1px rgb(16 24 40 / 0.045);
+
+  --glass-strong-bg: rgb(255 255 255 / 0.62);
+  --glass-strong-gradient: linear-gradient(165deg, rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0.5) 100%);
+  --glass-strong-border: rgb(16 24 40 / 0.07);
+  --glass-strong-border-top: rgb(255 255 255 / 0.95);
+  --glass-strong-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.95),
+    0 1px 2px rgb(16 24 40 / 0.05),
+    0 10px 28px -8px rgb(16 24 40 / 0.12),
+    0 28px 56px -22px rgb(16 24 40 / 0.18),
+    0 0 0 1px rgb(16 24 40 / 0.05);
+
+  --glass-sheen: none;
+  --chip-bg: rgb(0 0 0 / 0.04);
+  --chip-border: rgb(0 0 0 / 0.1);
+
+  --selection-bg: rgb(0 122 255 / 0.2);
+  --selection-color: inherit;
+
+  color-scheme: light;
+}
+
+.light .logo-image {
+  filter: brightness(0);
+}
+.light .logo-image-shadow {
+  filter: brightness(0) drop-shadow(0 0 0 transparent) !important;
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--line) / 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--ink);
+    font-feature-settings: "ss01", "cv11", "calt" 1;
+    letter-spacing: -0.011em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--selection-color);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .glass {
+    position: relative;
+    background-color: var(--glass-bg);
+    background-image: var(--glass-gradient);
+    backdrop-filter: blur(26px) saturate(1.6);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    isolation: isolate;
+  }
+
+  .glass-strong {
+    position: relative;
+    background-color: var(--glass-strong-bg);
+    background-image: var(--glass-strong-gradient);
+    backdrop-filter: blur(34px) saturate(1.7);
+    border: 1px solid var(--glass-strong-border);
+    box-shadow: var(--glass-strong-shadow);
+    isolation: isolate;
+  }
+
+  .glass-sheen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--glass-sheen);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .chip {
+    background: var(--chip-bg);
+    border: 1px solid var(--chip-border);
+    backdrop-filter: blur(12px);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--blue) 0%, var(--indigo) 48%, var(--violet) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-cream {
+    background: linear-gradient(180deg, var(--bg-soft) 0%, var(--cream) 46%, var(--ink-dim) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .light .text-cream {
+    background: none;
+    -webkit-text-fill-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .pressable {
+    transition: transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 1.05), box-shadow 0.25s ease, filter 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pressable:active {
+    transform: scale(0.96);
+  }
+
+  .btn-primary {
+    background: linear-gradient(165deg, var(--blue) 0%, var(--indigo) 100%);
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-top-color: rgb(255 255 255 / 0.4);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.4),
+      0 8px 22px -8px rgb(10 132 255 / 0.7),
+      0 2px 6px -2px rgb(0 0 0 / 0.4);
+    color: #fff;
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .light .grain::before {
+    opacity: 0; /* iOS light theme has no grain, keep it pure */
+  }
+}
+
+@media (max-width: 767px) {
+  .glass {
+    backdrop-filter: blur(14px) saturate(1.4);
+  }
+  .glass-strong {
+    backdrop-filter: blur(18px) saturate(1.4);
+  }
+}
+
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+}
+.floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, -3%) scale(1.08); }
+}
+.drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 2.2rem 0 0.6rem;
+  color: var(--ink);
+}
+.legal-prose p,
+.legal-prose li {
+  color: var(--ink-dim);
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+.legal-prose ul {
+  list-style: disc;
+  padding-left: 1.3rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.legal-prose strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.legal-prose a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.legal-prose a:hover {
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   In-app surfaces for the hero device mockup (AnimatedAppMockup).
+   A faithful copy of the real app's index.css surfaces — same tokens, same
+   gradients/shadows — pinned to the app's DARK theme and scoped under .dd-app
+   so the device always looks like the real product and nothing leaks into the
+   marketing site.
+   ════════════════════════════════════════════════════════════════════════ */
+.dd-app {
+  --dd-bg: 0 0% 0%;
+  --dd-surface: 240 4% 11%;
+  --dd-surface-elevated: 240 5% 18%;   /* app --surface-elevated #2C2C2E */
+  --dd-fg: 0 0% 100%;
+  --dd-fg2: 0 0% 90%;
+  --dd-muted: 231 18% 16%;
+  --dd-mfg: 220 12% 74%;
+  --dd-border: 227 20% 42%;
+  --dd-primary: 211 100% 50%;
+  --dd-indigo: 253 100% 58%;        /* app --primary-glow #5856D6 */
+  --dd-accent: 248 78% 66%;
+  --dd-accent2: 266 82% 62%;
+  --dd-ck: 142 72% 46%;             /* checklist emerald — checklist mode only */
+  --dd-ck2: 158 65% 42%;
+  --dd-success: 157 52% 58%;        /* app --success — money / earnings / done */
+  --dd-danger: 3 75% 62%;           /* app --destructive */
+  font-family: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: hsl(var(--dd-fg));
+}
+/* checklist scene remaps the accent to emerald, exactly like .checklist-theme */
+.dd-app .ck { --dd-accent: var(--dd-ck); --dd-accent2: var(--dd-ck2); }
+
+.dd-card {
+  border-radius: 18px;
+  border: 1px solid hsl(var(--dd-border) / 0.38);
+  border-top-color: rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(120% 140% at 0% 0%, hsl(var(--dd-primary) / 0.055) 0%, transparent 60%),
+    linear-gradient(168deg, hsl(var(--dd-surface) / 0.88) 0%, hsl(var(--dd-surface) / 0.76) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.22),
+    0 4px 14px -2px rgba(0, 0, 0, 0.44),
+    0 14px 36px -6px rgba(0, 0, 0, 0.32);
+  isolation: isolate;
+}
+.dd-ck-surface {
+  background:
+    linear-gradient(90deg, hsl(var(--dd-accent) / 0.06) 0%, transparent 100%),
+    hsl(var(--dd-surface) / 0.92);
+}
+.dd-accent-grad { background-image: linear-gradient(135deg, hsl(var(--dd-accent)) 0%, hsl(var(--dd-accent2)) 100%); }
+.dd-accent-grad-h { background-image: linear-gradient(90deg, hsl(var(--dd-accent)) 0%, hsl(var(--dd-accent2)) 100%); }
+.dd-accent-glow {
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.18),
+    0 4px 12px -2px hsl(var(--dd-accent) / 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.dd-mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }

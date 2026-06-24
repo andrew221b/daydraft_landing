@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/app-icon.png" />
+    <link rel="apple-touch-icon" href="/app-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#14161b" />
+    <title>DayDraft — Design your days</title>
+    <meta name="description" content="DayDraft turns your raw to-do list into a focused, AI-built daily schedule — then tracks your hours, earnings, and ships billing-ready reports." />
+
+    <meta property="og:title" content="DayDraft — Design your days" />
+    <meta property="og:description" content="AI-built daily plans, a timer that never loses count, and instant reports. Plan, track, bill." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/app-icon-512.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load fonts async so they never block first paint -->
+    <link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" />
+    <noscript><link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" /></noscript>
+
+    <style>
+      /* Pre-paint the dark slate so there is no white flash before React mounts. */
+      html, body, #root { background-color: #14161b; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
