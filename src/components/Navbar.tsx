@@ -4,7 +4,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { useReveal } from "../contexts/reveal";
 import { useTheme } from "../contexts/theme";
-import LogoMark from "./Logo";
+import { Logo } from "./Logo";
 
 const NAV_LINKS = [
   { label: "Features",     href: "#features" },
@@ -34,13 +34,10 @@ export default function Navbar() {
           >
             <Link
               to="/"
-              className="flex items-center gap-2.5 group"
+              className="group"
               onClick={() => setOpen(false)}
             >
-              <LogoMark size={32} className="transition-transform duration-300 group-hover:scale-105 -translate-y-0.5" />
-              <span className="font-display text-[19px] font-semibold tracking-tight text-cream leading-none">
-                DayDraft
-              </span>
+              <Logo size={32} className="transition-transform duration-300 group-hover:scale-105" />
             </Link>
 
             {/* Desktop nav */}

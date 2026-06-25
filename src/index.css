@@ -234,6 +234,18 @@
     color: var(--ink);
   }
 
+  .logo-text-metallic {
+    background: linear-gradient(180deg, #c1bfc4 0%, #b8b6b1 25%, #a9a6a1 50%, #a7a29e 75%, #7b7d7f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .light .logo-text-metallic {
+    background: none;
+    -webkit-text-fill-color: var(--ink);
+    color: var(--ink);
+  }
+
   .pressable {
     transition: transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 1.05), box-shadow 0.25s ease, filter 0.2s ease;
     -webkit-tap-highlight-color: transparent;

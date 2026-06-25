@@ -45,3 +45,23 @@ export default function LogoMark({ size = 32, className = "" }: { size?: number;
     />
   );
 }
+
+/**
+ * The full DayDraft logo (mark + typographic text).
+ * Meticulously spaced and weighted to look like a cohesive brand mark.
+ */
+export function Logo({ size = 32, className = "", textClassName = "" }: { size?: number; className?: string; textClassName?: string }) {
+  return (
+    <div className={`flex items-center gap-[5px] ${className}`}>
+      {/* Lifted further to optically align the bottom of the D (ignoring its shadow) with the text baseline */}
+      <LogoMark size={size} className="shrink-0 -translate-y-[3.5px]" />
+      <span 
+        className={`font-display tracking-[-0.04em] leading-none logo-text-metallic flex items-center ${textClassName}`}
+        style={{ fontSize: size * 0.8 }}
+      >
+        <span className="font-semibold">Day</span>
+        <span className="font-semibold">Draft</span>
+      </span>
+    </div>
+  );
+}

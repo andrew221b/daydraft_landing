@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import LogoMark from "./Logo";
+import { Logo } from "./Logo";
 
 export default function Footer() {
   const location = useLocation();
@@ -11,10 +11,7 @@ export default function Footer() {
         <div className="glass rounded-3xl px-6 py-8 sm:px-10 sm:py-9">
           <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             <div className="max-w-xs">
-              <div className="flex items-center gap-2.5">
-                <LogoMark size={32} />
-                <span className="font-display text-[18px] font-semibold text-cream">DayDraft</span>
-              </div>
+              <Logo size={32} />
               <p className="mt-3 text-[13.5px] leading-relaxed text-[var(--ink-dim)]">
                 Plans that fit the hours you have, a timer that counts from the moment you start, and a clean report at the end of the week. Your day, drafted.
               </p>
