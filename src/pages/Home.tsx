@@ -159,7 +159,7 @@ const CHAOS_NOTES = [
   { t: "Ship v2.1 before EOD!!", x: "2%", y: "66%", r: "6deg", c: "#BF5AF2", w: 152 },
   { t: "Design review — 2pm?", x: "37%", y: "62%", r: "-7deg", c: "#5E5CE6", w: 156 },
   { t: "Untracked: 3h?? ⚠️", x: "67%", y: "58%", r: "3deg", c: "#FF453A", w: 140 },
-  { t: "Make an appointment at 3pm!", x: "59%", y: "80%", r: "12deg", c: "#48484A", w: 56 },
+  { t: "Make an appointment at 3pm!", x: "42%", y: "80%", r: "12deg", c: "#48484A", w: 186 },
 ];
 
 type ChaosNoteData = { t: string; x: string; y: string; r: string; c: string; w: number };
@@ -879,7 +879,7 @@ export default function Home() {
                 <LogoMark size={56} className="mx-auto mb-6" />
                 <Eyebrow label="Get started free" color={INDIGO} />
                 <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-bold tracking-[-0.03em] text-[var(--ink)] mt-1">
-                  Stop winging it. Start working with a plan.
+                  Stop winging it. Work with a plan.
                 </h2>
                 <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed text-[var(--ink-dim)]">
                   Plan the day, keep an honest record of your hours, and bill them without the busywork. Get full Pro access free for 3 days.
