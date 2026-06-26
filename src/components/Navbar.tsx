@@ -73,7 +73,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2">
               <a
-                href="#download"
+                href={isHome ? "#download" : "/#download"}
                 className="btn-primary pressable inline-flex h-9 items-center justify-center rounded-xl px-4 sm:px-5 text-[13px] font-semibold"
               >
                 Get the app
