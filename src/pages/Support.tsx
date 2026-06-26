@@ -7,8 +7,10 @@ export default function Support() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialTab = searchParams.get("tab");
   const validTabs = ["feedback", "bug", "delete"] as const;
-  const initial = validTabs.includes(initialTab as any) ? (initialTab as any) : "feedback";
-  const [tab, setTab] = useState<"feedback" | "bug" | "delete">(initial);
+  type TabType = typeof validTabs[number];
+  const isValidTab = (t: string | null): t is TabType => validTabs.includes(t as TabType);
+  const initial: TabType = isValidTab(initialTab) ? initialTab : "feedback";
+  const [tab, setTab] = useState<TabType>(initial);
 
   useEffect(() => {
     setSearchParams({ tab }, { replace: true });
