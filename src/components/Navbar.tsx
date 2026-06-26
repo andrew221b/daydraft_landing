@@ -9,7 +9,7 @@ import { Logo } from "./Logo";
 const NAV_LINKS = [
   { label: "Features",     href: "#features" },
   { label: "How it works", href: "#how" },
-  { label: "Support",      href: "mailto:shapeinc25@gmail.com" },
+  { label: "Support",      href: "/support" },
 ];
 
 export default function Navbar() {

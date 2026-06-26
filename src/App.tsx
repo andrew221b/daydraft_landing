@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 
 import Home from "./pages/Home";
 import Legal from "./pages/Legal";
+import Support from "./pages/Support";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ParticlesCanvas from "./components/ParticlesBackground";
@@ -60,6 +61,7 @@ export default function App() {
               <Routes>
                 <Route path="/"      element={<Home />} />
                 <Route path="/legal" element={<Legal />} />
+                <Route path="/support" element={<Support />} />
               </Routes>
             </main>
             <Footer />

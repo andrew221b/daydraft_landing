@@ -81,7 +81,7 @@ function Privacy() {
 
       <h2>1. Who we are and how to contact us</h2>
       <p>DayDraft is an AI-assisted daily planning application. The data controller responsible for your personal data is:</p>
-      <p><strong>DayDraft / Andrew Plashevskyi</strong><br />Contact: <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a></p>
+      <p><strong>DayDraft / Andrew Plashevskyi</strong><br />Contact: <a href="mailto:support@daydraft.app">support@daydraft.app</a></p>
       <p>For privacy-related requests, questions, or complaints, write to us at the address above. We respond within 30 days.</p>
 
       <h2>2. Data we collect</h2>
@@ -157,7 +157,7 @@ function Privacy() {
         <li><strong>Right to delete:</strong> request deletion of your personal information (subject to limited exceptions, e.g., legal obligation to retain).</li>
         <li><strong>Right to non-discrimination:</strong> we will not discriminate against you for exercising any of the above rights.</li>
       </ul>
-      <p>To exercise any right, contact us at <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a>. We may need to verify your identity before fulfilling a request.</p>
+      <p>To exercise any right, contact us at <a href="mailto:support@daydraft.app">support@daydraft.app</a>. We may need to verify your identity before fulfilling a request.</p>
 
       <h2>10. Children</h2>
       <p>DayDraft is not directed to children under 13 (or the applicable minimum age of digital consent in your country — 16 in certain EU member states). We do not knowingly collect personal data from children below that age. If you believe a child has provided us data without appropriate consent, please contact us and we will delete it promptly.</p>
@@ -166,7 +166,7 @@ function Privacy() {
       <p>We will notify you of material changes via email and an in-app banner at least 14 days before the change takes effect, giving you time to review and, where required, provide fresh consent or delete your account.</p>
 
       <h2>12. Contact</h2>
-      <p>Privacy questions or requests: <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a>. We respond within 30 days.</p>
+      <p>Privacy questions or requests: <a href="mailto:support@daydraft.app">support@daydraft.app</a>. We respond within 30 days.</p>
     </div>
   );
 }
@@ -186,7 +186,7 @@ function Terms() {
       <p>DayDraft is an AI-assisted daily planning tool that helps you organise your day, track time, and produce billing-ready reports. We may update, add, or remove features from time to time. Where a change materially reduces a core feature you rely on, we will give you at least 14 days' notice by email or in-app notification before it takes effect.</p>
 
       <h2>2. Your account</h2>
-      <p>You must be at least 13 years old (or the minimum digital age of consent in your country) to create an account. You are responsible for keeping your login credentials confidential and for all activity that occurs under your account. Notify us immediately at <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a> if you suspect unauthorised access.</p>
+      <p>You must be at least 13 years old (or the minimum digital age of consent in your country) to create an account. You are responsible for keeping your login credentials confidential and for all activity that occurs under your account. Notify us immediately at <a href="mailto:support@daydraft.app">support@daydraft.app</a> if you suspect unauthorised access.</p>
 
       <h2>3. Acceptable use</h2>
       <p>You may use DayDraft only for lawful personal or professional productivity purposes. You must not:</p>
@@ -232,7 +232,7 @@ function Terms() {
 
       <h2>11. Governing law and dispute resolution</h2>
       <p>These Terms and any dispute arising out of or in connection with them shall be governed by and construed in accordance with applicable consumer protection laws of your country of residence, which prevail where they provide greater protection than the following. To the extent a specific jurisdiction applies, these Terms shall be governed by the laws of Ukraine, without regard to its conflict-of-law principles.</p>
-      <p>We encourage you to contact us first at <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a> to resolve any dispute informally. Most issues can be resolved this way within 30 days. If informal resolution fails, you may bring a claim in a court of competent jurisdiction in your country of residence, or, where required by local law, in the jurisdiction of Ukraine.</p>
+      <p>We encourage you to contact us first at <a href="mailto:support@daydraft.app">support@daydraft.app</a> to resolve any dispute informally. Most issues can be resolved this way within 30 days. If informal resolution fails, you may bring a claim in a court of competent jurisdiction in your country of residence, or, where required by local law, in the jurisdiction of Ukraine.</p>
       <p>Nothing in these Terms prevents you from filing a complaint with a consumer protection authority in your country.</p>
 
       <h2>12. Changes to these Terms</h2>
@@ -245,7 +245,7 @@ function Terms() {
       <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and DayDraft with respect to your use of the service and supersede all prior or contemporaneous agreements, representations, warranties, and understandings, written or oral, relating to the subject matter herein.</p>
 
       <h2>15. Contact</h2>
-      <p>Questions about these Terms: <a href="mailto:shapeinc25@gmail.com">shapeinc25@gmail.com</a></p>
+      <p>Questions about these Terms: <a href="mailto:support@daydraft.app">support@daydraft.app</a></p>
     </div>
   );
 }

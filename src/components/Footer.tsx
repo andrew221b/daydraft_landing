@@ -26,7 +26,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col gap-2.5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">Company</p>
-                <a href="mailto:shapeinc25@gmail.com" className="text-[13.5px] text-[var(--ink-dim)] hover:text-[var(--ink)] transition-colors">Contact</a>
+                <Link to="/support" className="text-[13.5px] text-[var(--ink-dim)] hover:text-[var(--ink)] transition-colors">Support</Link>
                 <Link to="/legal" className="text-[13.5px] text-[var(--ink-dim)] hover:text-[var(--ink)] transition-colors">Privacy</Link>
                 <Link to="/legal?tab=terms" className="text-[13.5px] text-[var(--ink-dim)] hover:text-[var(--ink)] transition-colors">Terms</Link>
               </div>
