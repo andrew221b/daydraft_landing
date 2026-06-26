@@ -40,9 +40,8 @@ export default function Support() {
             <button
               key={id}
               onClick={() => setTab(id)}
-              className={`relative flex items-center justify-center gap-1.5 sm:gap-2.5 rounded-xl px-3 py-2.5 sm:px-5 sm:py-3 text-[12px] sm:text-[13.5px] font-semibold transition-colors ${
-                tab === id ? "text-white" : "text-[var(--ink-dim)] hover:text-[var(--ink)]"
-              }`}
+              className={`relative flex items-center justify-center gap-1.5 sm:gap-2.5 rounded-xl px-3 py-2.5 sm:px-5 sm:py-3 text-[12px] sm:text-[13.5px] font-semibold transition-colors ${tab === id ? "text-white" : "text-[var(--ink-dim)] hover:text-[var(--ink)]"
+                }`}
             >
               {tab === id && (
                 <motion.span
@@ -72,7 +71,7 @@ export default function Support() {
               <p>
                 We're always looking for ways to improve DayDraft. If you have a feature request, a suggestion, or just want to share your thoughts, let us know.
               </p>
-              
+
               <h2>In the app (Recommended)</h2>
               <p>The fastest way to share your thoughts is directly through the app.</p>
               <ol>
@@ -92,7 +91,7 @@ export default function Support() {
               <p>
                 If something isn't working correctly, please tell us. The more detail you provide about what happened and what you expected, the faster we can investigate and deploy a fix.
               </p>
-              
+
               <h2>In the app (Recommended)</h2>
               <p>Reporting bugs from within the app is highly recommended because it automatically links the report to your account context, speeding up the investigation.</p>
               <ol>
@@ -112,7 +111,7 @@ export default function Support() {
               <p>
                 We respect your right to privacy. You can permanently delete your DayDraft account and all associated data at any time.
               </p>
-              
+
               <h2>How to delete your account inside the app</h2>
               <p>This is the quickest method and takes effect immediately.</p>
               <ol>
@@ -120,7 +119,7 @@ export default function Support() {
                 <li>Scroll to the bottom and tap <strong>Delete account</strong>.</li>
                 <li>Confirm your password to permanently delete your data.</li>
               </ol>
-              
+
               <h2>How to request manual deletion</h2>
               <p>If you no longer have the app installed or cannot log in, you can request a manual deletion:</p>
               <ol>

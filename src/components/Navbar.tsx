@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useReveal } from "../contexts/reveal";
 import { useTheme } from "../contexts/theme";
 import { Logo } from "./Logo";
@@ -18,6 +18,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <>
@@ -97,7 +108,11 @@ export default function Navbar() {
         {open && (
           <motion.div
             key="overlay"
-            className="fixed inset-0 z-30"
+            className="fixed inset-0 z-30 bg-black/40 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             onClick={() => setOpen(false)}
           />
         )}
@@ -106,10 +121,10 @@ export default function Navbar() {
             key="menu"
             className="fixed inset-x-0 z-40 px-4"
             style={{ top: 76 }}
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, scale: 0.96, y: -16, filter: "blur(8px)" }}
+            animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, scale: 0.96, y: -16, filter: "blur(8px)" }}
+            transition={{ type: "spring", stiffness: 400, damping: 30, mass: 0.8 }}
           >
             <div className="mx-auto max-w-6xl pt-2">
               <nav className="glass glass-sheen rounded-2xl p-2 flex flex-col">
