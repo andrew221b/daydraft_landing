@@ -44,7 +44,8 @@ export default function Navbar() {
             <nav className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((l) => {
                 const isExternal = l.href.startsWith("http") || l.href.startsWith("mailto");
-                const target = isHome || isExternal ? l.href : `/${l.href}`;
+                const isAnchor = l.href.startsWith("#");
+                const target = isHome || isExternal ? l.href : (isAnchor ? `/${l.href}` : l.href);
                 const className = "px-3.5 py-2 rounded-lg text-[13.5px] font-medium text-[var(--ink-dim)] hover:text-[var(--ink)] hover:bg-[var(--ink)]/5 transition-colors";
                 
                 return isExternal ? (
@@ -114,7 +115,8 @@ export default function Navbar() {
               <nav className="glass glass-sheen rounded-2xl p-2 flex flex-col">
                 {NAV_LINKS.map((l) => {
                   const isExternal = l.href.startsWith("http") || l.href.startsWith("mailto");
-                  const target = isHome || isExternal ? l.href : `/${l.href}`;
+                  const isAnchor = l.href.startsWith("#");
+                  const target = isHome || isExternal ? l.href : (isAnchor ? `/${l.href}` : l.href);
                   const className = "px-4 py-3.5 rounded-xl text-[15px] font-medium text-[var(--ink-dim)] hover:text-[var(--ink)] hover:bg-[var(--ink)]/5 transition-colors";
                   
                   return isExternal ? (
